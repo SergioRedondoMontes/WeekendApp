@@ -14,6 +14,11 @@ class VCPrincipal: UIViewController, UICollectionViewDelegate, UICollectionViewD
     var datos:[[NSDictionary]] = []
 
     @IBOutlet weak var collectionMain:UICollectionView!
+    @IBOutlet weak var btnBosque: UIButton!
+    @IBOutlet weak var btnBeach: UIButton!
+    @IBOutlet weak var btnCity: UIButton!
+    @IBOutlet weak var btnSk: UIButton!
+    @IBOutlet weak var btnMoun: UIButton!
     
     var first: Bool = true
     
@@ -21,6 +26,13 @@ class VCPrincipal: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        customBtn(button: btnBosque)
+        customBtn(button: btnSk)
+        customBtn(button: btnCity)
+        customBtn(button: btnMoun)
+        customBtn(button: btnBeach)
+        
         collectionMain.dataSource = self
         collectionMain.delegate = self
         menuFuera()
@@ -53,7 +65,7 @@ class VCPrincipal: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if datos.count != 0{
-            return 5
+            return 16
         }else{
             return 0
         }
@@ -61,6 +73,7 @@ class VCPrincipal: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCMain", for: indexPath) as! CVCMain
+        cell.weekend = "Weekend \(indexPath.row + 1)"
         if indexPath.row % 2 == 0{
             cell.indice = 0
         }else{
@@ -96,6 +109,13 @@ class VCPrincipal: UIViewController, UICollectionViewDelegate, UICollectionViewD
             self.viewTop.frame.origin.y = 0 - self.viewTop.frame.height
         })
         
+    }
+    
+    func customBtn(button:UIButton) {
+        //button.backgroundColor = .clear
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 3
+       // button.layer.borderColor = UIColor.black.cgColor
     }
 
 }

@@ -12,6 +12,7 @@ class TVCMain: UITableViewCell {
     
     @IBOutlet weak var lblTxt:UILabel!
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var lblPrice: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
