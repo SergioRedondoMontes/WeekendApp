@@ -19,6 +19,9 @@
 		EACBB1FA20C2AEF3009D39C1 /* HackTheJorney2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBB1F920C2AEF3009D39C1 /* HackTheJorney2018UITests.swift */; };
 		EACBB20B20C2B3CF009D39C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EACBB20A20C2B3CF009D39C1 /* GoogleService-Info.plist */; };
 		EACBB20D20C2B6E4009D39C1 /* Dataholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBB20C20C2B6E4009D39C1 /* Dataholder.swift */; };
+		EACBB21420C2D543009D39C1 /* TVCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBB21320C2D543009D39C1 /* TVCMain.swift */; };
+		EACBB21620C2D55E009D39C1 /* CVCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBB21520C2D55E009D39C1 /* CVCMain.swift */; };
+		EACBB21820C2D9CD009D39C1 /* VCPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBB21720C2D9CD009D39C1 /* VCPrincipal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		EACBB1FB20C2AEF3009D39C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EACBB20A20C2B3CF009D39C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EACBB20C20C2B6E4009D39C1 /* Dataholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataholder.swift; sourceTree = "<group>"; };
+		EACBB21320C2D543009D39C1 /* TVCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMain.swift; sourceTree = "<group>"; };
+		EACBB21520C2D55E009D39C1 /* CVCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCMain.swift; sourceTree = "<group>"; };
+		EACBB21720C2D9CD009D39C1 /* VCPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPrincipal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,8 @@
 		EACBB1D820C2AEF1009D39C1 /* HackTheJorney2018 */ = {
 			isa = PBXGroup;
 			children = (
+				EACBB21220C2D527009D39C1 /* Celdas */,
+				EACBB20F20C2C99B009D39C1 /* RestApi */,
 				EACBB1E020C2AEF3009D39C1 /* Assets.xcassets */,
 				EACBB1E520C2AEF3009D39C1 /* Info.plist */,
 				EACBB20820C2AF3B009D39C1 /* extras */,
@@ -191,8 +199,25 @@
 			isa = PBXGroup;
 			children = (
 				EACBB1DB20C2AEF2009D39C1 /* ViewController.swift */,
+				EACBB21720C2D9CD009D39C1 /* VCPrincipal.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		EACBB20F20C2C99B009D39C1 /* RestApi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RestApi;
+			sourceTree = "<group>";
+		};
+		EACBB21220C2D527009D39C1 /* Celdas */ = {
+			isa = PBXGroup;
+			children = (
+				EACBB21320C2D543009D39C1 /* TVCMain.swift */,
+				EACBB21520C2D55E009D39C1 /* CVCMain.swift */,
+			);
+			path = Celdas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +232,6 @@
 				EACBB1D320C2AEF1009D39C1 /* Frameworks */,
 				EACBB1D420C2AEF1009D39C1 /* Resources */,
 				5A60C88E83D021D41236ED9C /* [CP] Embed Pods Frameworks */,
-				3A9B8A925E069562F4652BC4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,38 +370,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A9B8A925E069562F4652BC4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HackTheJorney2018/Pods-HackTheJorney2018-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackTheJorney2018/Pods-HackTheJorney2018-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5A60C88E83D021D41236ED9C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,41 +377,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackTheJorney2018/Pods-HackTheJorney2018-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -472,8 +436,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACBB20D20C2B6E4009D39C1 /* Dataholder.swift in Sources */,
+				EACBB21820C2D9CD009D39C1 /* VCPrincipal.swift in Sources */,
 				EACBB1DC20C2AEF2009D39C1 /* ViewController.swift in Sources */,
+				EACBB21420C2D543009D39C1 /* TVCMain.swift in Sources */,
 				EACBB1DA20C2AEF1009D39C1 /* AppDelegate.swift in Sources */,
+				EACBB21620C2D55E009D39C1 /* CVCMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,10 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = "$(SRCROOT)/HackTheJorney2018/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -669,10 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = "$(SRCROOT)/HackTheJorney2018/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -689,11 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = HackTheJorney2018Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -711,11 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = HackTheJorney2018Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -732,11 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = HackTheJorney2018UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -753,11 +702,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MRNMJBVE;
 				INFOPLIST_FILE = HackTheJorney2018UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hack.The.Jorney.NoBody.HackTheJorney2018UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
