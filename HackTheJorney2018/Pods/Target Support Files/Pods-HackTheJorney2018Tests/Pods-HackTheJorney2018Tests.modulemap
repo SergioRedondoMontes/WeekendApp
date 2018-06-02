@@ -1,0 +1,6 @@
+framework module Pods_HackTheJorney2018Tests {
+  umbrella header "Pods-HackTheJorney2018Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

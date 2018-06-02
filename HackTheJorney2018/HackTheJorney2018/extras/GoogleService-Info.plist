@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>614306081831-91geki67bhu0tqq9u5h0tu2o5u4dp13u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.614306081831-91geki67bhu0tqq9u5h0tu2o5u4dp13u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA8yOD-ldgUnIAGx8tqa0IypFUwJdIRKG8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>614306081831</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Hack.The.Jorney.NoBody.HackTheJorney2018</string>
+	<key>PROJECT_ID</key>
+	<string>hackthejourney2018</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hackthejourney2018.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:614306081831:ios:712710a4a59fb833</string>
+	<key>DATABASE_URL</key>
+	<string>https://hackthejourney2018.firebaseio.com</string>
+</dict>
+</plist>
