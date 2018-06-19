@@ -18,6 +18,8 @@ class Dataholder: NSObject {
     
     var firDataBaseRef:DatabaseReference!
     
+    var dicImg: [String:UIImage]! = [:]
+    
     func initFirebase(){
         FirebaseApp.configure()
         firDataBaseRef=Database.database().reference()
